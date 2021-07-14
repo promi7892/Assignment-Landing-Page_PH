@@ -185,14 +185,20 @@ Common Properties
 	width: 300px;
 	height: 300px;
 }
+
 .slideshow .slide-container .slides {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	cursor: pointer;
 }
 .slideshow .slide-container .slides .slide {
 	margin: 0 1rem;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	overflow: hidden;
+}
+.slideshow .slide-container .slides .slide:hover {
+	transform: scale(1.1);
 }
 
 .slideshow .slide-container .load-btn {
@@ -200,7 +206,7 @@ Common Properties
 }
 
 .slideshow .slide-container .slide .artist-name {
-	margin: 0 0.5rem;
+	margin: 0.5rem;
 	text-align: left;
 	font-size: 16px;
 	color: rgb(148, 147, 147);
@@ -208,6 +214,38 @@ Common Properties
 .slideshow .slide-container .slide .artist-name a {
 	text-decoration: none;
 	color: indianred;
+}
+.sign-up {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+}
+.newsletter form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+form input {
+	width: 100%;
+	padding: 1rem;
+	margin: 1rem 0;
+}
+.form h1 {
+	text-align: center;
+	font-size: 3rem;
+	font-weight: bold;
+	margin: 2rem;
+	color: rgb(65, 64, 64);
+}
+::placeholder {
+	font-size: 1rem;
+}
+video {
+	height: 500px;
+	width: 600px;
+	margin: 3rem;
 }
 
 /* -----------
@@ -268,51 +306,56 @@ footer {
 		width: 300px;
 		height: 248px;
 	}
+}
 
-	@media only screen and (max-width: 688px) {
-		.banner {
-			display: flex;
-			flex-direction: column;
-			flex-wrap: wrap;
-		}
-		.player-gallary {
-			width: 100%;
-		}
-		.headline-title h1 {
-			font-size: 32px;
-			line-height: 40px;
-		}
-		.click-btn {
-			width: 168px;
-			height: 44px;
-		}
-		.banner .main-img {
-			width: 329px;
-			height: 259.17px;
-		}
-		.players,
-		.highlights,
-		.slides {
-			display: grid;
-			grid-template-columns: repeat(1, 1fr);
-			align-items: center;
-		}
-		.highlight-info {
-			width: 329px;
-			height: 299px;
-		}
-		.info {
-			font-size: 12px;
-			line-height: 20px;
-		}
+@media only screen and (max-width: 688px) {
+	.banner {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+	.first-container img {
+		margin-top: -20px;
+	}
+	.player-gallary {
+		width: 100%;
+	}
+	.headline-title h1 {
+		font-size: 32px;
+		line-height: 40px;
+	}
+	.click-btn {
+		width: 168px;
+		height: 44px;
+	}
+	.banner .main-img {
+		width: 329px;
+		height: 259.17px;
+	}
+	.players,
+	.highlights {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		align-items: center;
+	}
+	.highlight-info {
+		width: 329px;
+		height: 299px;
+	}
+	.info {
+		font-size: 12px;
+		line-height: 20px;
+	}
 
-		.all-highlights .highlights h2 {
-			font-size: 30px;
-			line-height: 40px;
-		}
-		.all-highlights .highlights img {
-			width: 300px;
-			height: 248px;
-		}
+	.all-highlights .highlights h2 {
+		font-size: 30px;
+		line-height: 40px;
+	}
+	.all-highlights .highlights img {
+		width: 300px;
+		height: 248px;
+	}
+	.slide-container .slide .artist-name {
+		display: none;
 	}
 }
