@@ -172,17 +172,21 @@ footer {
 	justify-content: center;
 }
 
-.footer .footer-logo img {
-	width: 300px;
+.footer img {
+	width: 400px;
 	height: 100px;
-	align-items: center;
 }
-
+.footer .social-site {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
 .footer .social-site .fab {
+	display: flex;
 	background: rgb(228, 227, 227);
 	color: grey;
 	border-radius: 50%;
-	font-size: 1.3rem;
+	font-size: 1rem;
 	padding: 10px;
 	margin: 10px;
 	cursor: pointer;
@@ -197,9 +201,27 @@ footer {
 
 .footer p {
 	margin-top: 20px;
+	text-align: center;
+}
+@media only screen and (min-width: 688px) and (max-width: 992px) {
+	.banner {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+	.players {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.all-highlights .highlights img {
+		width: 300px;
+		height: 248px;
+	}
 }
 
-@media (max-width: 688px) {
+@media only screen and (max-width: 688px) {
 	.banner {
 		display: flex;
 		flex-direction: column;
@@ -224,7 +246,6 @@ footer {
 	.highlights {
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
-
 		align-items: center;
 	}
 	.highlight-info {
@@ -243,8 +264,5 @@ footer {
 	.all-highlights .highlights img {
 		width: 300px;
 		height: 248px;
-	}
-	.footer {
-		align-items: center;
 	}
 }
