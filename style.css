@@ -1,0 +1,230 @@
+/* -------------------
+Common Properties
+-----------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	transition: all 1s ease;
+}
+.headline-title {
+	font-weight: bold;
+	font-size: 2rem;
+	line-height: 80px;
+	color: #fff;
+}
+
+.click-btn {
+	width: 168px;
+	height: 44px;
+	background: #e02c6d;
+	color: #fff;
+	font-size: 1rem;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.click-btn:hover {
+	color: darkblue;
+	background: turquoise;
+	transform: scale(1.2);
+}
+
+.info {
+	font-size: 16px;
+	line-height: 26px;
+	font-weight: 300;
+	color: #818080;
+}
+
+/* -------------------
+Common Properties
+-----------------------*/
+
+.banner {
+	display: flex;
+	width: 100%;
+	background: rgb(4, 4, 156);
+	align-items: center;
+	justify-content: center;
+}
+
+.first-container {
+	margin: 240px 156px;
+}
+.headline-title h1 {
+	font-weight: bold;
+	font-size: 64px;
+	line-height: 80px;
+}
+.banner .main-img {
+	width: 556.01px;
+	height: 438px;
+	/* margin-right: 130px; */
+	animation: animate 2s ease-in-out infinite alternate-reverse both;
+}
+
+/*  Image animation */
+@keyframes animate {
+	0% {
+		transform: translateY(10px);
+	}
+	100% {
+		transform: translateY(-10px);
+	}
+}
+
+/* ---------------------------
+		Player Galary Section 
+		------------------------------*/
+
+.player-gallary {
+	width: 60%;
+	margin: 70px 150px;
+}
+.players {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 30px;
+}
+.player {
+	display: flex;
+	flex-direction: column;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	width: 330px;
+	align-items: center;
+}
+
+.player .player-image {
+	width: 300px;
+	height: 256px;
+	margin: 15px;
+	overflow: hidden;
+}
+
+.player .player-image:hover {
+	transform: scale(1.1);
+	border-radius: 5%;
+	width: 250px;
+	height: 200px;
+	margin: 20px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.player .player-details {
+	margin: 16px;
+}
+.player .player-details h3 {
+	font-weight: bold;
+	font-size: 28px;
+	line-height: 40px;
+}
+
+/* ------------------------
+	Highlights
+---------------------------*/
+
+.highlights {
+	display: flex;
+	margin: 70px 150px;
+	/* padding: 1rem; */
+	flex-direction: row;
+}
+.highlight-title {
+	width: 469px;
+}
+
+.all-highlights .highlights img {
+	width: 567px;
+	height: 427px;
+	margin: 10px;
+}
+
+.all-highlights .highlights h2 {
+	font-weight: bold;
+	font-size: 48px;
+	line-height: 60px;
+}
+
+.highlight-title button {
+	margin-top: 20px;
+}
+/* -----------
+Footer Section 
+--------------*/
+
+.footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 100px;
+}
+
+.footer .football {
+	width: 300px;
+	height: 100px;
+}
+
+.footer .social-site .fab {
+	background: rgb(228, 227, 227);
+	color: grey;
+	border-radius: 50%;
+	font-size: 1.3rem;
+	padding: 10px;
+	margin: 10px;
+	cursor: pointer;
+	align-items: center;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.footer .social-site .fab:hover {
+	color: rgb(228, 227, 227);
+	background: grey;
+	transform: rotate(360deg);
+}
+
+.footer p {
+	margin-top: 20px;
+}
+
+@media (max-width: 688px) {
+	.banner {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	.headline-title h1 {
+		font-size: 36px;
+		line-height: 50px;
+	}
+	.click-btn {
+		width: 168px;
+		height: 44px;
+	}
+	.banner .main-img {
+		width: 329px;
+		height: 259.17px;
+	}
+	.players {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-gap: 30px;
+	}
+	.highlights {
+		display: flex;
+		flex-direction: column;
+	}
+	.all-highlights {
+		width: 329px;
+	}
+	.all-highlights .highlights h2 {
+		font-size: 30px;
+		line-height: 40px;
+	}
+	.all-highlights .highlights img {
+		width: 328px;
+		height: 248px;
+	}
+}
