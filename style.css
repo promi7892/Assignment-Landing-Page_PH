@@ -10,6 +10,11 @@ Common Properties
 	font-family: 'Poppins', sans-serif;
 	transition: all 1s ease;
 }
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
 .headline-title {
 	font-weight: bold;
 	font-size: 2rem;
@@ -84,8 +89,8 @@ Common Properties
 		------------------------------*/
 
 .player-gallary {
-	width: 60%;
-	margin: 70px 150px;
+	margin: 70px 140px;
+	width: 80%;
 }
 .players {
 	display: grid;
@@ -160,16 +165,17 @@ Common Properties
 Footer Section 
 --------------*/
 
-.footer {
+footer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-bottom: 100px;
+	justify-content: center;
 }
 
-.footer .football {
+.footer .footer-logo img {
 	width: 300px;
 	height: 100px;
+	align-items: center;
 }
 
 .footer .social-site .fab {
@@ -195,13 +201,16 @@ Footer Section
 
 @media (max-width: 688px) {
 	.banner {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+	.player-gallary {
 		width: 100%;
-		display: grid;
-		grid-template-columns: repeat(1, 1fr);
 	}
 	.headline-title h1 {
-		font-size: 36px;
-		line-height: 50px;
+		font-size: 32px;
+		line-height: 40px;
 	}
 	.click-btn {
 		width: 168px;
@@ -215,19 +224,27 @@ Footer Section
 	.highlights {
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
-		grid-gap: 30px;
+
 		align-items: center;
 	}
-
-	.all-highlights {
+	.highlight-info {
 		width: 329px;
+		height: 299px;
 	}
+	.info {
+		font-size: 12px;
+		line-height: 20px;
+	}
+
 	.all-highlights .highlights h2 {
 		font-size: 30px;
 		line-height: 40px;
 	}
 	.all-highlights .highlights img {
-		width: 328px;
+		width: 300px;
 		height: 248px;
+	}
+	.footer {
+		align-items: center;
 	}
 }
