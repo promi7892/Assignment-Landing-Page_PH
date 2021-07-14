@@ -161,6 +161,55 @@ Common Properties
 .highlight-info button {
 	margin-top: 20px;
 }
+
+/* -------------------
+		fan club
+	------------------- */
+
+.slideshow {
+	margin: 70px 140px;
+	width: 80%;
+}
+.slideshow h2 {
+	font-size: 2.5rem;
+	font-weight: bolder;
+	margin-bottom: 1rem;
+}
+.slideshow .slide-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.slideshow .slide-container img {
+	width: 300px;
+	height: 300px;
+}
+.slideshow .slide-container .slides {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.slideshow .slide-container .slides .slide {
+	margin: 0 1rem;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.slideshow .slide-container .load-btn {
+	margin: 2rem 0;
+}
+
+.slideshow .slide-container .slide .artist-name {
+	margin: 0 0.5rem;
+	text-align: left;
+	font-size: 16px;
+	color: rgb(148, 147, 147);
+}
+.slideshow .slide-container .slide .artist-name a {
+	text-decoration: none;
+	color: indianred;
+}
+
 /* -----------
 Footer Section 
 --------------*/
@@ -219,50 +268,51 @@ footer {
 		width: 300px;
 		height: 248px;
 	}
-}
 
-@media only screen and (max-width: 688px) {
-	.banner {
-		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-	}
-	.player-gallary {
-		width: 100%;
-	}
-	.headline-title h1 {
-		font-size: 32px;
-		line-height: 40px;
-	}
-	.click-btn {
-		width: 168px;
-		height: 44px;
-	}
-	.banner .main-img {
-		width: 329px;
-		height: 259.17px;
-	}
-	.players,
-	.highlights {
-		display: grid;
-		grid-template-columns: repeat(1, 1fr);
-		align-items: center;
-	}
-	.highlight-info {
-		width: 329px;
-		height: 299px;
-	}
-	.info {
-		font-size: 12px;
-		line-height: 20px;
-	}
+	@media only screen and (max-width: 688px) {
+		.banner {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+		}
+		.player-gallary {
+			width: 100%;
+		}
+		.headline-title h1 {
+			font-size: 32px;
+			line-height: 40px;
+		}
+		.click-btn {
+			width: 168px;
+			height: 44px;
+		}
+		.banner .main-img {
+			width: 329px;
+			height: 259.17px;
+		}
+		.players,
+		.highlights,
+		.slides {
+			display: grid;
+			grid-template-columns: repeat(1, 1fr);
+			align-items: center;
+		}
+		.highlight-info {
+			width: 329px;
+			height: 299px;
+		}
+		.info {
+			font-size: 12px;
+			line-height: 20px;
+		}
 
-	.all-highlights .highlights h2 {
-		font-size: 30px;
-		line-height: 40px;
-	}
-	.all-highlights .highlights img {
-		width: 300px;
-		height: 248px;
+		.all-highlights .highlights h2 {
+			font-size: 30px;
+			line-height: 40px;
+		}
+		.all-highlights .highlights img {
+			width: 300px;
+			height: 248px;
+		}
 	}
 }
