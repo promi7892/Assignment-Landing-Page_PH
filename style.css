@@ -45,11 +45,13 @@ Common Properties
 -----------------------*/
 
 .banner {
-	display: flex;
+	/* display: flex; */
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
 	width: 100%;
 	background: rgb(4, 4, 156);
 	align-items: center;
-	justify-content: center;
+	/* justify-content: center; */
 }
 
 .first-container {
@@ -130,10 +132,12 @@ Common Properties
 .highlights {
 	display: flex;
 	margin: 70px 150px;
-	/* padding: 1rem; */
+	padding: 1rem;
 	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
 }
-.highlight-title {
+.highlight-info {
 	width: 469px;
 }
 
@@ -149,7 +153,7 @@ Common Properties
 	line-height: 60px;
 }
 
-.highlight-title button {
+.highlight-info button {
 	margin-top: 20px;
 }
 /* -----------
@@ -192,8 +196,8 @@ Footer Section
 @media (max-width: 688px) {
 	.banner {
 		width: 100%;
-		display: flex;
-		flex-direction: column;
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
 	}
 	.headline-title h1 {
 		font-size: 36px;
@@ -207,15 +211,14 @@ Footer Section
 		width: 329px;
 		height: 259.17px;
 	}
-	.players {
+	.players,
+	.highlights {
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
 		grid-gap: 30px;
+		align-items: center;
 	}
-	.highlights {
-		display: flex;
-		flex-direction: column;
-	}
+
 	.all-highlights {
 		width: 329px;
 	}
